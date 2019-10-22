@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Page potin</title>
+</head>
+
+<body>
+  <p>Voici la page du potin n°
+    <!-- affichage de l'id du potin-->
+    <%= id %>
+  </p>
+  </br> Son auteur :
+  <!-- affichage de l'auteur de potin -->
+  <%= gossip.author %>
+    </br>Le contenu du potin :
+    <!-- affichage du content de potin -->
+    <%= gossip.content %>
+      <!-- lien qui redirige vers la page principale -->
+      </br><a href="/">pour revenir à la page des potins</a>
+</body>
+
+</html>

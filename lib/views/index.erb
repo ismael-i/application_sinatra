@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>bienvenue !</h1>
+  <!-- creation d'un gossip -->
+  <p>la liste des potins arrive bientôt, et qu'en attendant, vous pouvez <a href="gossips/new">creer un gossip</a>.</p>
+  <%each_with_index = 1;%>
+    <!-- pour chaque gossip, afficher les auteurs, les contents des gossips stocké dans gossip.csv-->
+    <%gossips.each do |gossip|%>
+      <p>
+        <!-- lien, pour aller vers la fiche d'un potin -->
+        <a href="gossips/<%=each_with_index%>">
+          <%= gossip.author%>
+            </br>
+            <%= gossip.content%>
+              <%each_with_index+=1%>
+        </a>
+      </p>
+      <% end %>
+</body>
+
+</html>
